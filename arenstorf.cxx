@@ -113,7 +113,7 @@ void RKstep(double* yn, const double x, const double dx, const int dim, const do
   for(int i=0;i<dim; i++) k6[i] = y0[i] + dx * ( (9017.0/3168 * k1[i]) + (-355.0/33 *k2[i]) + (46732.0/5247 *k3[i]) + (49.0/176 *k4[i]) + (-5103.0/18656 *k5[i]));
 	f(k6,  x+ dx);
 
-  for(int i=0;i<dim; i++) k7[i] = y0[i] + dx * ( (35.0/384 * k1[i]) + (500.0/1113 *k3[i])  + (125.0/192 *k4[i]) + (-2187.0/6784 *k5[i]) + + (11.0/84 *k5[i]));
+  for(int i=0;i<dim; i++) k7[i] = y0[i] + dx * ( (35.0/384 * k1[i]) + (500.0/1113 *k3[i])  + (125.0/192 *k4[i]) + (-2187.0/6784 *k5[i]) +  (11.0/84 *k6[i]));
 	f(k7,  x+ dx);
 
 
